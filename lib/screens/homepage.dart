@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:fooddeliveryweb/theme/fontTheme.dart';
+import 'package:fooddeliveryweb/widgets/scrollItem.dart';
 
 
 
@@ -100,9 +102,7 @@ Map<int, Map<String, dynamic>> sellerData = {
       appBar: AppBar(
         title: Text(
           'Welcome',
-          style: TextStyle(
-            color: Colors.black
-          ),
+          style: headLineFontStyle
         ),
         backgroundColor: Colors.white,
         actions: [
@@ -121,7 +121,7 @@ Map<int, Map<String, dynamic>> sellerData = {
                 scrollDirection: Axis.horizontal,
                 itemCount: offersData.length,
                 itemBuilder: (context, index){
-                  return scrollItem(
+                  return ScrollItem(
                     offersData[index]!['title'],
                     offersData[index]!['color'],
                     offersData[index]!['icon'],
@@ -153,7 +153,7 @@ Map<int, Map<String, dynamic>> sellerData = {
                 physics: NeverScrollableScrollPhysics(),
                 itemCount: offersData.length,
                 itemBuilder: (context, index){
-                  return scrollItem(
+                  return ScrollItem(
                     offersData[index]!['title'],
                     offersData[index]!['color'],
                     offersData[index]!['icon'],
@@ -171,42 +171,7 @@ Map<int, Map<String, dynamic>> sellerData = {
     return ListTile(
       title: Text(
         '$title',
-        style: TextStyle(color: Colors.black, fontSize: 20.0, fontWeight: FontWeight.bold),
-      ),
-    );
-  }
-  scrollItem(String title, Color color, IconData icon, bool isStores) {
-    return Container(
-      width: 350.0,
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(20.0),
-        color: color,
-      ),
-      alignment: isStores == false ? Alignment.center : Alignment.bottomRight,
-      margin: EdgeInsets.all(10.0),
-      child: isStores == false ? ListTile(
-        leading: Container(
-          padding: EdgeInsets.all(10.0),
-          decoration: BoxDecoration(
-            color: Colors.white,
-            shape: BoxShape.circle,
-          ),
-          child: Icon(icon, color: Colors.black, size: 35),
-        ),
-        title: Text(
-          '$title',
-          style: TextStyle(color: Colors.white, fontSize: 20.0, fontWeight: FontWeight.bold),
-        ),
-        subtitle: Text(
-          'Find best restaurants near your location with best quality',
-          style: TextStyle(color: Colors.white, fontSize: 17.0, fontWeight: FontWeight.bold),
-        ),
-      ) : Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: Text(
-          '$title',
-          style: TextStyle(color: Colors.white, fontSize: 20.0, fontWeight: FontWeight.bold),
-        ),
+        style: headLineFontStyle
       ),
     );
   }
@@ -231,11 +196,11 @@ Map<int, Map<String, dynamic>> sellerData = {
               ),
               title: Text(
                 '$title',
-                style: TextStyle(color: Colors.black, fontSize: 20.0, fontWeight: FontWeight.bold),
+                style: headLineFontStyle
               ),
               subtitle: Text(
                 '$category',
-                style: TextStyle(color: Colors.grey, fontSize: 15.0, fontWeight: FontWeight.normal),
+                style: subineFontStyle
               ),
             ),
             Row(
@@ -243,11 +208,11 @@ Map<int, Map<String, dynamic>> sellerData = {
               children: [
                 Text(
                   '  10 : 50 KM',
-                  style: TextStyle(color: Colors.grey, fontSize: 15.0, fontWeight: FontWeight.normal),
+                  style: subineFontStyle
                 ),
                 Text(
                   '4.9 Rating  ',
-                  style: TextStyle(color: Colors.grey, fontSize: 15.0, fontWeight: FontWeight.normal),
+                  style: subineFontStyle
                 ),
               ],
             ),
