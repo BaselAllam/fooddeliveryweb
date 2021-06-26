@@ -17,37 +17,32 @@ Map<int, Map<String, dynamic>> offersData = {
   0 : {
     'color' : Colors.red,
     'title' : 'Vegetables',
-    'icon' : Icons.local_offer
+    'image' : 'https://images.pexels.com/photos/2097090/pexels-photo-2097090.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260'
   },
   1 : {
     'color' : Colors.blue,
     'title' : 'Fruites',
-    'icon' : Icons.restaurant_menu
+    'image' : 'https://images.pexels.com/photos/461428/pexels-photo-461428.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260'
   },
   2 : {
     'color' : Colors.green,
     'title' : 'Tomato',
-    'icon' : Icons.shopping_basket
+    'image' : 'https://images.pexels.com/photos/704971/pexels-photo-704971.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260'
   },
   3 : {
     'color' : Colors.indigo,
     'title' : 'Apple',
-    'icon' : Icons.shopping_cart
+    'image' : 'https://images.pexels.com/photos/704971/pexels-photo-704971.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260'
   },
   4 : {
     'color' : Colors.red,
     'title' : 'Apple',
-    'icon' : Icons.shopping_cart
+    'image' : 'https://images.pexels.com/photos/1092730/pexels-photo-1092730.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'
   },
   5 : {
     'color' : Colors.green,
     'title' : 'Apple',
-    'icon' : Icons.shopping_cart
-  },
-  6 : {
-    'color' : Colors.blue,
-    'title' : 'Apple',
-    'icon' : Icons.shopping_cart
+    'image' : 'https://images.pexels.com/photos/1775043/pexels-photo-1775043.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'
   },
 
 };
@@ -65,14 +60,14 @@ Map<int, Map<String, dynamic>> sellerData = {
     'storesImages' : 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmpiXaNCy8bMOy9sYbTdE3AdP6-R1EQVu5qk0d57C8FKoEnBkWMM0SWHZtgPNfRCPopXk&usqp=CAU',
   },
   2 : {
-    'storeTitle' : 'Spinnes',
+    'storeTitle' : 'Mac',
     'storesSubTitle' : 'Super Market',
-    'storesImages' : 'http://img0cf.b8cdn.com/images/logo/24/1470824_logo_1573726187_n.png',
+    'storesImages' : 'https://images.pexels.com/photos/5851368/pexels-photo-5851368.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
   },
   3 : {
     'storeTitle' : 'Tomatos Salad',
     'storesSubTitle' : 'Vegetables & Fruites',
-    'storesImages' : 'https://image.freepik.com/free-vector/mountain-fruits-white-background-fruit-market-store-logo-illustration_136277-486.jpg'
+    'storesImages' : 'https://images.pexels.com/photos/5945657/pexels-photo-5945657.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'
   },
   4 : {
     'storeTitle' : 'Carefour',
@@ -85,14 +80,14 @@ Map<int, Map<String, dynamic>> sellerData = {
     'storesImages' : 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmpiXaNCy8bMOy9sYbTdE3AdP6-R1EQVu5qk0d57C8FKoEnBkWMM0SWHZtgPNfRCPopXk&usqp=CAU',
   },
   6 : {
-    'storeTitle' : 'Spinnes',
+    'storeTitle' : 'Mac',
     'storesSubTitle' : 'Super Market',
-    'storesImages' : 'http://img0cf.b8cdn.com/images/logo/24/1470824_logo_1573726187_n.png',
+    'storesImages' : 'https://images.pexels.com/photos/5851368/pexels-photo-5851368.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
   },
   7 : {
     'storeTitle' : 'Tomatos Salad',
     'storesSubTitle' : 'Vegetables & Fruites',
-    'storesImages' : 'https://image.freepik.com/free-vector/mountain-fruits-white-background-fruit-market-store-logo-illustration_136277-486.jpg'
+    'storesImages' : 'https://images.pexels.com/photos/5945657/pexels-photo-5945657.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'
   },
 };
 
@@ -104,13 +99,13 @@ Map<int, Map<String, dynamic>> sellerData = {
           'Welcome',
           style: headLineFontStyle
         ),
-        backgroundColor: Colors.white,
+        backgroundColor: Colors.grey[100],
         actions: [
           Icon(Icons.search, color: Colors.grey, size: 35.0)
         ],
         elevation: 0.0,
       ),
-      backgroundColor: Colors.white,
+      backgroundColor: Colors.grey[100],
       body: Container(
         child: ListView(
           scrollDirection: Axis.vertical,
@@ -123,8 +118,7 @@ Map<int, Map<String, dynamic>> sellerData = {
                 itemBuilder: (context, index){
                   return ScrollItem(
                     offersData[index]!['title'],
-                    offersData[index]!['color'],
-                    offersData[index]!['icon'],
+                    offersData[index]!['image'],
                     false
                   );
                 },
@@ -143,7 +137,7 @@ Map<int, Map<String, dynamic>> sellerData = {
             ),
             headLine('Popular Services'),
             Container(
-              height: 400.0,
+              height: 300.0,
               child: GridView.builder(
                 scrollDirection: Axis.vertical,
                 gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
@@ -155,8 +149,7 @@ Map<int, Map<String, dynamic>> sellerData = {
                 itemBuilder: (context, index){
                   return ScrollItem(
                     offersData[index]!['title'],
-                    offersData[index]!['color'],
-                    offersData[index]!['icon'],
+                    offersData[index]!['image'],
                     true
                   );
                 },
@@ -173,6 +166,7 @@ Map<int, Map<String, dynamic>> sellerData = {
         '$title',
         style: headLineFontStyle
       ),
+      trailing: Icon(Icons.arrow_forward_ios, color: Colors.black, size: 25),
     );
   }
   storesItem(String image, String title, String category) {
@@ -200,7 +194,7 @@ Map<int, Map<String, dynamic>> sellerData = {
               ),
               subtitle: Text(
                 '$category',
-                style: subineFontStyle
+                style: sublineFontStyle
               ),
             ),
             Row(
@@ -208,11 +202,11 @@ Map<int, Map<String, dynamic>> sellerData = {
               children: [
                 Text(
                   '  10 : 50 KM',
-                  style: subineFontStyle
+                  style: sublineFontStyle
                 ),
                 Text(
                   '4.9 Rating  ',
-                  style: subineFontStyle
+                  style: sublineFontStyle
                 ),
               ],
             ),

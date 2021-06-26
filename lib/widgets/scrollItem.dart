@@ -5,11 +5,10 @@ import 'package:flutter/material.dart';
 class ScrollItem extends StatefulWidget {
 
   final String title;
-  final Color color;
-  final IconData icon;
+  final String image;
   final bool isStores;
 
-  ScrollItem(this.title, this.color, this.icon, this.isStores);
+  ScrollItem(this.title, this.image, this.isStores);
 
   @override
   _ScrollItemState createState() => _ScrollItemState();
@@ -22,7 +21,11 @@ class _ScrollItemState extends State<ScrollItem> {
       width: 350.0,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20.0),
-        color: widget.color,
+        image: DecorationImage(
+          image: NetworkImage(widget.image),
+          fit: BoxFit.fill,
+          colorFilter: ColorFilter.mode(Colors.black26, BlendMode.color)
+        ),
       ),
       alignment: widget.isStores == false ? Alignment.center : Alignment.bottomRight,
       margin: EdgeInsets.all(10.0),
@@ -33,7 +36,7 @@ class _ScrollItemState extends State<ScrollItem> {
             color: Colors.white,
             shape: BoxShape.circle,
           ),
-          child: Icon(widget.icon, color: Colors.black, size: 35),
+          child: Icon(Icons.local_offer, color: Colors.black, size: 35),
         ),
         title: Text(
           '${widget.title}',
