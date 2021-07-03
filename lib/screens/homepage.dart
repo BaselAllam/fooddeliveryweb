@@ -4,6 +4,7 @@ import 'package:fooddeliveryweb/screens/allStores.dart';
 import 'package:fooddeliveryweb/screens/popularServices.dart';
 import 'package:fooddeliveryweb/theme/fontTheme.dart';
 import 'package:fooddeliveryweb/widgets/scrollItem.dart';
+import 'package:fooddeliveryweb/widgets/searchButton.dart';
 import 'package:fooddeliveryweb/widgets/storeitem.dart';
 
 class HomePage extends StatefulWidget {
@@ -18,7 +19,7 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         title: Text('Welcome', style: headLineFontStyle),
         backgroundColor: Colors.grey[100],
-        actions: [Icon(Icons.search, color: Colors.grey, size: 35.0)],
+        actions: [SearchButton()],
         elevation: 0.0,
       ),
       backgroundColor: Colors.grey[100],

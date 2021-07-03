@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fooddeliveryweb/demodata.dart';
 import 'package:fooddeliveryweb/theme/fontTheme.dart';
+import 'package:fooddeliveryweb/widgets/searchButton.dart';
 import 'package:fooddeliveryweb/widgets/storeitem.dart';
 
 class AllStores extends StatefulWidget {
@@ -24,7 +25,7 @@ class _AllStoresState extends State<AllStores> {
           ),
         ),
         backgroundColor: Colors.grey[100],
-        actions: [Icon(Icons.search, color: Colors.grey, size: 35.0)],
+        actions: [SearchButton()],
         iconTheme: IconThemeData(color: Colors.black),
         elevation: 0.0,
       ),
