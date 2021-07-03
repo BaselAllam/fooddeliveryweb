@@ -10,8 +10,9 @@ final String titles;
 final String label;
 final IconData icon;
 bool isSecure;
+TextEditingController controller;
 
-Field(this.titles, this.label, this.icon, this.isSecure);
+Field(this.titles, this.label, this.icon, this.isSecure, this.controller);
 
   @override
   _FieldState createState() => _FieldState();
@@ -58,6 +59,7 @@ bool secured = true;
             textInputAction: TextInputAction.done,
             keyboardType: TextInputType.name,
             obscureText: widget.titles == 'Password' ? secured : widget.isSecure,
+            controller: widget.controller
           ),
         ),
       ),

@@ -3,7 +3,6 @@ import 'package:fooddeliveryweb/theme/fontTheme.dart';
 import 'package:fooddeliveryweb/widgets/field.dart';
 
 
-
 class Login extends StatefulWidget {
 
   @override
@@ -13,6 +12,9 @@ class Login extends StatefulWidget {
 class _LoginState extends State<Login> {
 
 bool secured = true;
+
+TextEditingController userNameController = TextEditingController();
+TextEditingController passwordController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -59,8 +61,8 @@ bool secured = true;
                   ),
                 ],
               ),
-              Field('User Name', 'User Name', Icons.account_circle, false),
-              Field('Password', 'Password', Icons.lock, secured),
+              Field('User Name', 'User Name', Icons.account_circle, false, userNameController),
+              Field('Password', 'Password', Icons.lock, secured, passwordController),
               SizedBox(height: 50,),
               Column(
                 children: [
