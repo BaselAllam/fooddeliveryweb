@@ -61,6 +61,28 @@ bool secured = true;
               ),
               Field('User Name', 'User Name', Icons.account_circle, false),
               Field('Password', 'Password', Icons.lock, secured),
+              SizedBox(height: 50,),
+              Column(
+                children: [
+                  InkWell(
+                    onTap: () {},
+                    child: Container(
+                      height: 45.0,
+                      width: MediaQuery.of(context).size.width/2.5 / 2,
+                      alignment: Alignment.bottomCenter,
+                      padding: EdgeInsets.only(bottom: 10),
+                      child: Text(
+                        'Login',
+                        style: TextStyle(color: Colors.white, fontSize: 25.0, fontWeight: FontWeight.bold),
+                      ),
+                      decoration: BoxDecoration(
+                        color: Colors.teal,
+                        borderRadius: BorderRadius.circular(15.0)
+                      ),
+                    ),
+                  ),
+                ],
+              ),
             ],
           ),
         ),
