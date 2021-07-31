@@ -98,7 +98,9 @@ class _RestaurantDetailsState extends State<RestaurantDetails> {
                       backgroundColor: Colors.white,
                       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.0)),
                       content: Container(
-                        child: Column(
+                        height: MediaQuery.of(context).size.height/1.5,
+                        width: MediaQuery.of(context).size.width/1.5,
+                        child: ListView(
                           children: [
                             dialogItem('Friday', '10:00 AM to 10:00 PM'),
                             divider(),
@@ -134,7 +136,7 @@ class _RestaurantDetailsState extends State<RestaurantDetails> {
                 itemBuilder: (context, index) {
                   return Container(
                     margin: EdgeInsets.all(10.0),
-                    width: MediaQuery.of(context).size.width/4,
+                    width: MediaQuery.of(context).size.width/2.5,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(20.0),
                       image: DecorationImage(
@@ -161,7 +163,7 @@ class _RestaurantDetailsState extends State<RestaurantDetails> {
       child: Stack(
         children: [
           Container(
-            height: MediaQuery.of(context).size.height / 2.5,
+            height: MediaQuery.of(context).size.height / 3.0,
             decoration: BoxDecoration(
               image: DecorationImage(
                   image: NetworkImage(
@@ -190,20 +192,20 @@ class _RestaurantDetailsState extends State<RestaurantDetails> {
                 ]),
           ),
           Positioned(
-            bottom: 0.0,
-            left: MediaQuery.of(context).size.width/3.5,
-            right: MediaQuery.of(context).size.width/3.5,
-            top: 250.0,
+            bottom: 25.0,
+            left: 25.0,
+            right: 25.0,
+            top: 200.0,
             child: Container(
-              height: MediaQuery.of(context).size.height / 4,
+              height: 200.0,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(20.0),
                 color: Colors.white,
               ),
               child: ListTile(
                 leading: Container(
-                  height: 150.0,
-                  width: 150.0,
+                  height: 100.0,
+                  width: 100.0,
                   padding: EdgeInsets.all(10.0),
                   decoration: BoxDecoration(
                       color: Colors.white,

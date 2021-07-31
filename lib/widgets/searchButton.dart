@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fooddeliveryweb/screens/searchResult.dart';
 
 
 class SearchButton extends StatefulWidget {
@@ -13,8 +14,10 @@ class _SearchButtonState extends State<SearchButton> {
     return IconButton(
       icon: Icon(Icons.search),
       color: Colors.teal,
-      iconSize: 35.0,
-      onPressed: () {},
+      iconSize: 25.0,
+      onPressed: () {
+        Navigator.push(context, MaterialPageRoute(builder: (_) {return SearchResult();}));
+      },
     );
   }
 }
